@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd">
+    
+    <!--- there is way to put value -->
+ <bean class="Spring1.com.Company"  name="Company1">
+	<property name ="Empid">
+		<value> 3211</value> 
+		</property>
+		<property name="Empname">
+			<value> Sudarpechai </value>
+		</property>
+		<property name="Empage">
+			<value> 34</value>
+		</property>
+		<property name="Empcity">
+			<value> Durgapur</value>
+		</property> 
+	</bean>
+	
+	
+	
+ <bean class="Spring1.com.Company"  name="Company2">
+		 <property name="Empid" value="14213"/>
+		 <property name="Empname" value=" Chandara"/>
+		 <property name="Empage" value="42"/>
+		 <property name="Empcity" value="Kanpur"/>
+		 <property name="phones" >
+			 <list>
+				 <value> MI</value>
+				  <value> Samsung</value>
+				   <value> Oppo</value>
+				    <value> Vivo</value>
+			 </list>
+		 </property>
+		 <property name="laptops">
+			 <set>
+				 <value>Assus</value>
+				  <value>Lenovo</value>
+				   <value>Viao</value>
+				    <value>Dell</value>
+				     <value>Hp</value>
+			 </set>
+		 </property>
+		 <property name="courses">
+			 <map>
+				<entry key="Java" value="6 monthes" />
+				<entry key="Python" value="8 monthes" />
+				<entry key="C++" value="9 monthes" />
+			 </map>
+		 </property>
+		 
+		 
+		 <property name="prop">
+			 <props>
+				<prop key="Ajax"> 4 mothes</prop>
+				<prop key="Angular">3 monthes</prop>
+			 </props>
+		 </property>
+		
+ </bean>
+ 
+ 
+  <bean class="Spring1.com.Company"  name="Company3" p:Empid="4321" p:Empname="Roman" p:Empage="36" p:Empcity="Kerala"/>
+  
+  
+ 
+  </beans>
